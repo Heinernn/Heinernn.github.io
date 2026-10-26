@@ -4,176 +4,331 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Heiner Navarro | Junior Software Developer</title>
-  <meta name="description" content="Junior software developer and IT support professional from Costa Rica. Web development, databases, Python and systems administration.">
+  <meta name="description" content="Junior software developer and IT support professional from Costa Rica. Web development, databases, Python and systems administration. Available for remote work.">
+  <meta name="theme-color" content="#09090a">
+  <link rel="canonical" href="https://heinernn.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Heiner Navarro | Junior Software Developer">
+  <meta property="og:description" content="I build web applications and keep systems running. Costa Rica, open to remote work.">
+  <meta property="og:url" content="https://heinernn.github.io/">
+  <meta property="og:image" content="https://heinernn.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Heiner Navarro",
+    "jobTitle": "Junior Software Developer",
+    "url": "https://heinernn.github.io/",
+    "email": "mailto:heinern14@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Cartago", "addressCountry": "CR" },
+    "sameAs": ["https://github.com/Heinernn", "https://www.linkedin.com/in/heiner-navarro-8485a316b"]
+  }
+  </script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-  <header class="site-header">
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-label mono">heiner@portfolio:~$ boot</span>
+      <span class="loader-count mono"><span id="loader-num">0</span>%</span>
+    </div>
+    <div class="loader-bar"><span id="loader-fill"></span></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
     <div class="wrap bar">
-      <a class="brand" href="#top">Heiner Navarro</a>
-      <nav aria-label="Main">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="#top" aria-label="Heiner Navarro, home">
+        <span class="brand-mark">HN</span><span class="brand-name">Heiner Navarro</span>
+      </a>
+      <nav aria-label="Main" class="nav">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#stack" data-i18n="nav_stack">Stack</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#experience" data-i18n="nav_exp">Experience</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
     </div>
   </header>
 
   <main id="main">
+    <!-- HERO -->
     <section class="hero" id="top">
-      <div class="wrap">
-        <p class="eyebrow">Costa Rica &middot; Open to remote and hybrid work</p>
-        <h1>Junior software developer with a background in IT support.</h1>
-        <p class="lead">I build web applications and work with databases, and I know how infrastructure behaves
-          because I have supported it. I study Systems Engineering and I am looking for a team where I can keep
-          learning on real projects.</p>
-        <p class="actions">
-          <a class="button" href="cv.pdf" download>Download CV</a>
-          <a class="button ghost" href="#contact">Get in touch</a>
+      <canvas id="bg" aria-hidden="true"></canvas>
+      <div class="hero-fade" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="status mono" data-reveal>
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="status">Available immediately &middot; Costa Rica (UTC-6)</span>
         </p>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap two">
-        <h2>About</h2>
-        <div>
-          <p>I am halfway through a Systems Engineering degree at Universidad Americana and have worked in
-            technology since 2017: IT maintenance, on-site support for client companies, server virtualization
-            and, more recently, building a corporate web platform with inventory and sales management.</p>
-          <p>Before that I spent six years at Align Technology talking every day with doctors from around the
-            world to turn their requirements into precise 3D treatment plans, and I automated parts of the workflow
-            to reduce manufacturing time. That taught me to listen to a client, ask the right questions and deliver
-            exactly what was agreed.</p>
-          <p>My English is advanced (EF SET 73/100, C2) and I am available immediately.</p>
+        <h1 class="hero-title" id="hero-title" aria-label="Junior developer who keeps systems running.">
+          <span class="line" data-i18n-split="hero_1">Junior developer</span>
+          <span class="line" data-i18n-split="hero_2">who keeps systems <em>running.</em></span>
+        </h1>
+        <div class="hero-grid">
+          <p class="lead" data-reveal data-i18n="lead">I build web applications and work with databases, and I understand infrastructure because I have supported it, on site and remote. Systems Engineering student, looking for a team where I can keep learning on real projects.</p>
+          <div class="hero-side" data-reveal>
+            <div class="actions">
+              <a class="button primary" href="cv.pdf" download data-magnetic><span data-i18n="btn_cv">Download CV</span><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a class="button ghost" href="#contact" data-magnetic data-i18n="btn_contact">Get in touch</a>
+            </div>
+            <div class="term" aria-hidden="true">
+              <div class="term-bar"><i></i><i></i><i></i><span class="mono">~/heiner</span></div>
+              <pre class="term-body mono" id="term"></pre>
+            </div>
+          </div>
         </div>
       </div>
+      <a class="scroll-hint mono" href="#about" aria-label="Scroll down"><span data-i18n="scroll">scroll</span><i></i></a>
     </section>
 
-    <section id="skills">
-      <div class="wrap two">
-        <h2>Skills</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Development</h3>
-            <p>Python, JavaScript (React, Node.js, Angular), Java, HTML/CSS, WordPress, Git. Basic to intermediate level.</p>
-          </article>
-          <article class="card">
-            <h3>Data</h3>
-            <p>Relational databases and SQL: design, management and updates with attention to data integrity.</p>
-          </article>
-          <article class="card">
-            <h3>Systems</h3>
-            <p>Windows, Linux (command line basics) and macOS. Virtualization with VMware and VirtualBox.</p>
-          </article>
-          <article class="card">
-            <h3>Networking &amp; support</h3>
-            <p>Cisco IT Essentials and CCNA 1. Troubleshooting for end users, on site and remote.</p>
-          </article>
-        </div>
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Python</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Angular</span><span>Java</span><span>SQL</span><span>Flask</span><span>Git</span><span>Linux</span><span>Windows</span><span>VMware</span><span>VirtualBox</span><span>Networking</span>
+        <span>Python</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Angular</span><span>Java</span><span>SQL</span><span>Flask</span><span>Git</span><span>Linux</span><span>Windows</span><span>VMware</span><span>VirtualBox</span><span>Networking</span>
       </div>
-    </section>
+    </div>
 
-    <section id="projects">
+    <!-- ABOUT -->
+    <section class="block" id="about">
       <div class="wrap">
-        <h2>Projects</h2>
-        <p class="note">Small projects with sample data only. Each one has tests and a README.</p>
-        <div class="grid three">
-          <article class="card project">
-            <h3>Inventory &amp; Quotes</h3>
-            <p>Web app to manage a product inventory and build customer quotes. The server validates stock and
-              calculates subtotal, tax and total.</p>
-            <ul class="tags"><li>Python</li><li>Flask</li><li>SQLite</li><li>JavaScript</li><li>pytest</li></ul>
-            <a class="repo" data-repo="inventory-quotes" href="#projects">View code</a>
-          </article>
-          <article class="card project">
-            <h3>Task Automation</h3>
-            <p>Command line tools: a safe file organizer (dry run by default) and a report that summarises a CSV
-              export of support tickets.</p>
-            <ul class="tags"><li>Python</li><li>CLI</li><li>CSV</li><li>pytest</li></ul>
-            <a class="repo" data-repo="task-automation" href="#projects">View code</a>
-          </article>
-          <article class="card project">
-            <h3>IT Support Notes</h3>
-            <p>Step-by-step guides I use at work: network troubleshooting, Windows reinstall checklist, Linux
-              basics and virtualization labs.</p>
-            <ul class="tags"><li>Documentation</li><li>Linux</li><li>Networking</li><li>VMware</li></ul>
-            <a class="repo" data-repo="it-support-notes" href="#projects">View notes</a>
-          </article>
+        <p class="kicker mono"><span>01</span> <span data-i18n="k_about">About</span></p>
+        <div class="about-grid">
+          <h2 class="big" data-i18n-split="about_h">From the help desk to the code editor.</h2>
+          <div class="about-text">
+            <p data-reveal data-i18n="about_1">I am halfway through a Systems Engineering degree at Universidad Americana and have worked in technology since 2017: IT maintenance, on-site support for client companies, server virtualization and, more recently, a corporate web platform with inventory and sales management.</p>
+            <p data-reveal data-i18n="about_2">Before that I spent six years at Align Technology talking every day with doctors from around the world to turn their requirements into precise 3D treatment plans, and I automated parts of the workflow to reduce manufacturing time. That taught me to listen to a client, ask the right questions and deliver exactly what was agreed.</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="wrap two">
-        <h2>Experience</h2>
-        <ol class="timeline">
-          <li>
-            <h3>Systems Administrator &amp; Developer <span>Monsol Technologies &middot; 2025 &ndash; present</span></h3>
-            <ul>
-              <li>Built a corporate web platform with integrated inventory and commercial management.</li>
-              <li>Developed order and quotation modules with real-time data processing and security protocols.</li>
-              <li>Administer servers and relational databases and keep services running during critical failures.</li>
-            </ul>
-          </li>
-          <li>
-            <h3>CAD Designer <span>Align Technology &middot; 2019 &ndash; 2025</span></h3>
-            <ul>
-              <li>Worked daily with doctors worldwide to turn their requirements into 3D treatment plans.</li>
-              <li>Optimized and automated workflows in specialized software to reduce manufacturing time.</li>
-              <li>Trained and onboarded new team members.</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Developer &amp; Technical Support <span>Unifica Tecnolog&iacute;a &middot; 2018</span></h3>
-            <ul>
-              <li>Developed in Java and built web interfaces with HTML/CSS.</li>
-              <li>On-site support for client companies: assembled, maintained and virtualized servers and solved network incidents.</li>
-            </ul>
-          </li>
-          <li>
-            <h3>IT Maintenance Technician <span>Ministerio de Hacienda &middot; 2017</span></h3>
-            <ul>
-              <li>Preventive and corrective maintenance, hardware and software diagnosis, and database updates.</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="wrap two">
-        <h2>Education</h2>
-        <ul class="plain">
-          <li><strong>B.Sc. in Systems Engineering</strong> (in progress, expected 2028), Universidad Americana</li>
-          <li>Technical High School Diploma in IT Technical Support, CTP Fernando Volio Jim&eacute;nez</li>
-          <li>Cisco IT Essentials and Cisco CCNA 1</li>
+        <ul class="stats">
+          <li data-reveal><b class="num" data-count="2017" data-nocomma>0</b><span data-i18n="s1">working in IT since</span></li>
+          <li data-reveal><b class="num"><span data-count="6">0</span>+</b><span data-i18n="s2">years of daily client communication</span></li>
+          <li data-reveal><b class="num"><span data-count="73">0</span><small>/100</small></b><span data-i18n="s3">EF SET English score (C2)</span></li>
+          <li data-reveal><b class="num" data-count="3">0</b><span data-i18n="s4">projects with tests, public on GitHub</span></li>
         </ul>
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- STACK -->
+    <section class="block" id="stack">
       <div class="wrap">
-        <h2>Contact</h2>
-        <p>The best way to reach me is by email or LinkedIn.</p>
-        <p class="actions">
-          <a class="button" href="mailto:heinern14@gmail.com">heinern14@gmail.com</a>
-          <a class="button ghost" href="https://www.linkedin.com/in/heiner-navarro-8485a316b" rel="noopener">LinkedIn</a>
-          <a class="button ghost" data-github href="#contact">GitHub</a>
+        <p class="kicker mono"><span>02</span> <span data-i18n="k_stack">Stack</span></p>
+        <h2 class="big" data-i18n-split="stack_h">The tools I work with.</h2>
+        <p class="note" data-reveal data-i18n="stack_note">Honest levels: I am a junior, so most of it is basic to intermediate, and I keep growing it with real projects.</p>
+        <div class="stack-grid">
+          <article class="panel" data-reveal data-tilt>
+            <header><h3 data-i18n="st1">Build</h3><span class="level mono" data-i18n="lv_bi">basic &ndash; intermediate</span></header>
+            <ul class="chips"><li>Python</li><li>JavaScript</li><li>React</li><li>Node.js</li><li>Angular</li><li>Java</li><li>HTML/CSS</li><li>WordPress</li><li>Git</li></ul>
+          </article>
+          <article class="panel" data-reveal data-tilt>
+            <header><h3 data-i18n="st2">Data</h3><span class="level mono" data-i18n="lv_bi">basic &ndash; intermediate</span></header>
+            <ul class="chips"><li>SQL</li><li>Relational databases</li><li>SQLite</li><li data-i18n="c_int">Data integrity</li></ul>
+          </article>
+          <article class="panel" data-reveal data-tilt>
+            <header><h3 data-i18n="st3">Systems</h3><span class="level mono" data-i18n="lv_bi">basic &ndash; intermediate</span></header>
+            <ul class="chips"><li>Windows</li><li>Linux (CLI)</li><li>macOS</li><li>VMware</li><li>VirtualBox</li><li>Proxmox <em class="faint" data-i18n="c_basic">(basic)</em></li></ul>
+          </article>
+          <article class="panel" data-reveal data-tilt>
+            <header><h3 data-i18n="st4">Network &amp; support</h3><span class="level mono">Cisco</span></header>
+            <ul class="chips"><li>IT Essentials</li><li>CCNA 1</li><li data-i18n="c_ts">Troubleshooting</li><li data-i18n="c_onsite">On-site &amp; remote support</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="block" id="work">
+      <div class="wrap">
+        <p class="kicker mono"><span>03</span> <span data-i18n="k_work">Selected work</span></p>
+        <h2 class="big" data-i18n-split="work_h">Small projects, built properly.</h2>
+        <p class="note" data-reveal data-i18n="work_note">Sample data only. Each one has tests, a README and public code.</p>
+
+        <div class="stack-cards">
+          <article class="project" data-card>
+            <div class="project-copy">
+              <p class="mono idx">01 / 03</p>
+              <h3>Inventory &amp; Quotes</h3>
+              <p data-i18n="p1_d">A web app to manage product inventory and build customer quotes. The server validates stock and calculates subtotal, tax and total, so the client can never send wrong numbers.</p>
+              <ul class="chips small"><li>Python</li><li>Flask</li><li>SQLite</li><li>JavaScript</li><li>pytest</li></ul>
+              <a class="repo" href="https://github.com/Heinernn/inventory-quotes" target="_blank" rel="noopener" data-magnetic><span data-i18n="view_code">View code</span> <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M5 15L15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <div class="project-vis" aria-hidden="true">
+              <div class="quote">
+                <div class="quote-head mono"><span>QUOTE #1042</span><span>sample data</span></div>
+                <div class="q-row"><span>Keyboard</span><span class="mono">2 &times; 25.00</span><span class="mono">50.00</span></div>
+                <div class="q-row"><span>Monitor 24&quot;</span><span class="mono">1 &times; 180.00</span><span class="mono">180.00</span></div>
+                <div class="q-sum"><span>Subtotal</span><span class="mono" data-count="230" data-dec="2">0.00</span></div>
+                <div class="q-sum"><span>Tax 13%</span><span class="mono" data-count="29.9" data-dec="2">0.00</span></div>
+                <div class="q-sum total"><span>Total</span><span class="mono" data-count="259.9" data-dec="2">0.00</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-card>
+            <div class="project-copy">
+              <p class="mono idx">02 / 03</p>
+              <h3>Task Automation</h3>
+              <p data-i18n="p2_d">Command line tools in Python: a file organizer that is safe by default (dry run, never overwrites) and a report that summarises a CSV export of support tickets. Standard library only.</p>
+              <ul class="chips small"><li>Python</li><li>CLI</li><li>CSV</li><li>pytest</li></ul>
+              <a class="repo" href="https://github.com/Heinernn/task-automation" target="_blank" rel="noopener" data-magnetic><span data-i18n="view_code">View code</span> <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M5 15L15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <div class="project-vis" aria-hidden="true">
+              <div class="term wide">
+                <div class="term-bar"><i></i><i></i><i></i><span class="mono">ticket_report.py</span></div>
+<pre class="term-body mono" data-type>$ python ticket_report.py tickets.csv
+Tickets: 10
+
+By status
+  closed         8
+  open           2
+
+Average time to close (hours)
+  hardware       22.8
+  network        3.9
+  password       0.4
+  software       7.4
+  overall        6.7
+
+Still open: T-1005, T-1008</pre>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-card>
+            <div class="project-copy">
+              <p class="mono idx">03 / 03</p>
+              <h3>IT Support Notes</h3>
+              <p data-i18n="p3_d">The step-by-step guides I use at work, written down: network troubleshooting, a Windows reinstall checklist, Linux basics and virtualization labs.</p>
+              <ul class="chips small"><li>Documentation</li><li>Networking</li><li>Linux</li><li>VMware</li></ul>
+              <a class="repo" href="https://github.com/Heinernn/it-support-notes" target="_blank" rel="noopener" data-magnetic><span data-i18n="view_notes">View notes</span> <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M5 15L15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <div class="project-vis" aria-hidden="true">
+              <ol class="check">
+                <li><i></i><span data-i18n="ck1">Is it just this user?</span></li>
+                <li><i></i><span data-i18n="ck2">Cable, link light, Wi-Fi</span></li>
+                <li><i></i><span data-i18n="ck3">IP config: 169.254.x.x?</span></li>
+                <li><i></i><span data-i18n="ck4">Ping gateway, 8.8.8.8, name</span></li>
+                <li><i></i><span data-i18n="ck5">DNS: nslookup, flush cache</span></li>
+                <li><i></i><span data-i18n="ck6">Trace where traffic stops</span></li>
+              </ol>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="block" id="experience">
+      <div class="wrap">
+        <p class="kicker mono"><span>04</span> <span data-i18n="k_exp">Experience</span></p>
+        <h2 class="big" data-i18n-split="exp_h">Where I have worked.</h2>
+        <div class="timeline" id="timeline">
+          <div class="tl-line" aria-hidden="true"><span id="tl-fill"></span></div>
+          <article class="job" data-reveal>
+            <p class="when mono">2025 &ndash; <span data-i18n="present">present</span></p>
+            <div>
+              <h3 data-i18n="j1_t">Systems Administrator &amp; Developer</h3>
+              <p class="where">Monsol Technologies</p>
+              <ul>
+                <li data-i18n="j1_1">Built a corporate web platform with integrated inventory and commercial management.</li>
+                <li data-i18n="j1_2">Developed order and quotation modules with real-time data processing and security protocols.</li>
+                <li data-i18n="j1_3">Administer servers and relational databases and keep services running during critical failures.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job" data-reveal>
+            <p class="when mono">2019 &ndash; 2025</p>
+            <div>
+              <h3 data-i18n="j2_t">CAD Designer</h3>
+              <p class="where">Align Technology</p>
+              <ul>
+                <li data-i18n="j2_1">Worked daily with doctors worldwide to turn their requirements into 3D treatment plans.</li>
+                <li data-i18n="j2_2">Optimized and automated workflows in specialized software to reduce manufacturing time.</li>
+                <li data-i18n="j2_3">Trained and onboarded new team members.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job" data-reveal>
+            <p class="when mono">2018</p>
+            <div>
+              <h3 data-i18n="j3_t">Developer &amp; Technical Support</h3>
+              <p class="where">Unifica Tecnolog&iacute;a</p>
+              <ul>
+                <li data-i18n="j3_1">Developed in Java and built web interfaces with HTML/CSS.</li>
+                <li data-i18n="j3_2">On-site support for client companies: assembled, maintained and virtualized servers and solved network incidents.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job" data-reveal>
+            <p class="when mono">2017</p>
+            <div>
+              <h3 data-i18n="j4_t">IT Maintenance Technician</h3>
+              <p class="where">Ministerio de Hacienda</p>
+              <ul>
+                <li data-i18n="j4_1">Preventive and corrective maintenance, hardware and software diagnosis, and database updates.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="edu" data-reveal>
+          <h3 class="mono" data-i18n="k_edu">Education</h3>
+          <ul>
+            <li><strong data-i18n="e1">B.Sc. in Systems Engineering</strong> <span data-i18n="e1b">(in progress, expected 2028), Universidad Americana</span></li>
+            <li data-i18n="e2">Technical High School Diploma in IT Technical Support, CTP Fernando Volio Jim&eacute;nez</li>
+            <li data-i18n="e3">Cisco IT Essentials and Cisco CCNA 1</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block contact" id="contact">
+      <div class="wrap">
+        <p class="kicker mono"><span>05</span> <span data-i18n="k_contact">Contact</span></p>
+        <h2 class="big" data-i18n-split="contact_h">Let&rsquo;s work together.</h2>
+        <p class="note" data-reveal data-i18n="contact_note">The fastest way to reach me is email. I answer quickly.</p>
+        <button class="mail" type="button" id="copy-mail" data-reveal aria-label="Copy email address">
+          <span class="mail-addr">heinern14@gmail.com</span>
+          <span class="mail-hint mono" id="copy-hint" data-i18n="copy">click to copy</span>
+        </button>
+        <p class="actions" data-reveal>
+          <a class="button primary" href="mailto:heinern14@gmail.com" data-magnetic data-i18n="btn_mail">Send an email</a>
+          <a class="button ghost" href="https://www.linkedin.com/in/heiner-navarro-8485a316b" target="_blank" rel="noopener" data-magnetic>LinkedIn</a>
+          <a class="button ghost" href="https://github.com/Heinernn" target="_blank" rel="noopener" data-magnetic>GitHub</a>
         </p>
-        <p class="small">Cartago, Costa Rica &middot; +506 8611 4352</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap"><p>&copy; <span id="year"></span> Heiner Navarro</p></div>
+    <div class="wrap foot">
+      <p>&copy; <span id="year"></span> Heiner Navarro &middot; Cartago, Costa Rica</p>
+      <p class="mono" data-i18n="built">Hand-built with HTML, CSS, JavaScript, GSAP and WebGL.</p>
+    </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
