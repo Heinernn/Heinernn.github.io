@@ -13,7 +13,7 @@
   const ES = {
     skip: "Saltar al contenido",
     nav_about: "Sobre mí", nav_stack: "Tecnologías", nav_work: "Proyectos", nav_exp: "Experiencia", nav_contact: "Contacto",
-    status: "Disponibilidad inmediata · Costa Rica (UTC-6)",
+    status: "Abierto a roles remotos e híbridos · Costa Rica (UTC-6)",
     hero_1: "Desarrollador junior",
     hero_2: "que mantiene los sistemas <em>funcionando.</em>",
     lead: "Desarrollador de software junior con seis años de trabajo técnico directo con clientes y experiencia práctica en soporte de TI. Construyo aplicaciones web y herramientas basadas en datos, y entiendo la infraestructura que las sostiene porque la he mantenido. Curso Ingeniería en Sistemas y busco un puesto remoto o híbrido en un equipo que entregue software real.",
@@ -56,12 +56,12 @@
     built: "Diseñado y desarrollado con HTML, CSS, JavaScript, GSAP y WebGL.",
     t_whoami: "heiner · desarrollador junior · base en soporte de TI",
     t_stack: "python · javascript · sql · linux · redes",
-    t_status: "disponibilidad: inmediata · remoto"
+    t_status: "disponibilidad: roles remotos e híbridos"
   };
   const EN_TERM = {
     t_whoami: "heiner · junior developer · IT support background",
     t_stack: "python · javascript · sql · linux · networking",
-    t_status: "available: immediately · remote ok"
+    t_status: "open to: remote and hybrid roles"
   };
 
   const EN = { ...EN_TERM };
